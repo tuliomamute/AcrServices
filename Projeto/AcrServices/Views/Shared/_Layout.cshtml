@@ -2,41 +2,74 @@
 <html>
 <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - My ASP.NET Application</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0" />
+
+    <title>ACR Services</title>
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
 </head>
 <body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
+    <nav class="black" role="navigation">
+        <div class="nav-wrapper container">
+            <a id="logo-container" href="#" class="brand-logo">ACR Services</a>
+            <ul class="right hide-on-med-and-down">
+                <li class="active"><a href="#">Home</a></li>
+                <li class="active"><a href="#">Serviços</a></li>
+                <li class="active"><a href="#">Contato</a></li>
+
+            </ul>
+            <ul id="nav-mobile" class="side-nav">
+                <li class="active"><a href="#">Home</a></li>
+                <li class="active"><a href="#">Serviços</a></li>
+                <li class="active"><a href="#">Contato</a></li>
+
+            </ul>
+            <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+        </div>
+    </nav>
+
+    <div class="container">
+        @RenderBody()
+    </div>
+    <footer class="page-footer red darken-4">
         <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
-            </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li>@Html.ActionLink("About", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
-                </ul>
+
+            <div class="row">
+                <div class="col l6 s12">
+                    <h5 class="white-text">Contato</h5>
+                    <ul>
+                        <li><span class="white-text" href="#!">Telefone 1: (031) 9 8492-1818</span></li>
+                        <li><span class="white-text" href="#!">Telefone 2: (031) 9 9961-2984</span></li>
+                        <li><span class="white-text" href="#!">Email: comercial@@acrservices.com.br</span></li>
+                    </ul>
+
+                </div>
             </div>
         </div>
-    </div>
-    <div class="container body-content">
-        @RenderBody()
-        <hr />
-        <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
-        </footer>
-    </div>
+
+        <div class="footer-copyright">
+            <div class="container">
+                @@Feito por <a class="orange-text text-lighten-3" href="#">ACR Services</a>
+            </div>
+        </div>
+    </footer>
 
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/materialize")
     @RenderSection("scripts", required: false)
+
+    <script>
+        (function ($) {
+            $(function () {
+
+                $('.button-collapse').sideNav();
+
+            }); // end of document ready
+        })(jQuery); // end of jQuery name space
+    </script>
+
 </body>
 </html>
