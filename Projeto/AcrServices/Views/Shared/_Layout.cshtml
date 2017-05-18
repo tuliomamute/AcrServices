@@ -18,13 +18,13 @@
             <ul class="right hide-on-med-and-down">
                 <li class="active"><a href="#">Home</a></li>
                 <li class="active"><a href="#">Serviços</a></li>
-                <li class="active"><a href="#">Contato</a></li>
+                <li class="active">@Html.ActionLink("Contato", "Contact", "Home")</li>
 
             </ul>
             <ul id="nav-mobile" class="side-nav">
                 <li class="active"><a href="#">Home</a></li>
                 <li class="active"><a href="#">Serviços</a></li>
-                <li class="active"><a href="#">Contato</a></li>
+                <li class="active">@Html.ActionLink("Contato", "Contact", "Home")</li>
 
             </ul>
             <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
@@ -34,6 +34,7 @@
     <div class="container">
         @RenderBody()
     </div>
+
     <footer class="page-footer red darken-4">
         <div class="container">
 
@@ -41,9 +42,10 @@
                 <div class="col l6 s12">
                     <h5 class="white-text">Contato</h5>
                     <ul>
-                        <li><span class="white-text" href="#!">Telefone 1: (031) 9 8492-1818</span></li>
-                        <li><span class="white-text" href="#!">Telefone 2: (031) 9 9961-2984</span></li>
+                        <li><span class="white-text" href="#!">Telefone: (031) 3047-2589</span></li>
                         <li><span class="white-text" href="#!">Email: comercial@@acrservices.com.br</span></li>
+                        <li><span class="white-text" href="#!">Endereço: Rua Cora Coralina, 105 - Santa Helena, Belo Horizonte</span></li>
+
                     </ul>
 
                 </div>
@@ -52,6 +54,7 @@
 
         <div class="footer-copyright">
             <div class="container">
+
                 @@Feito por <a class="yellow-text text-lighten-3" href="#">ACR Services</a>
             </div>
         </div>

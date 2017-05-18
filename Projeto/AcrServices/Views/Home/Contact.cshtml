@@ -1,17 +1,83 @@
-﻿@{
-    ViewBag.Title = "Contact";
+﻿@model AcrServices.Models.Contact
+
+<h2>Fale Conosco</h2>
+
+@section scripts{
+    <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyAvNkhmZzm0ocmtgU9jQZKq42qmi7wmh68"></script>
+    <script type="text/javascript" language="javascript">
+        //variavel cria para que seja criado o mapa Google Maps
+        var map = null;
+        //Essa e a funcao que criara o mapa GoogleMaps
+        function chamaMapa() {
+            //aqui vamos definir as coordenadas de latitude e longitude no qual
+            //sera exibido o nosso mapa
+            var latlng = new google.maps.LatLng(-19.989271, -44.010857); //DEFINE A LOCALIZAÇÃO EXATA DO MAPA
+            //aqui vamos configurar o mapa, como o zoom, o centro do mapa, etc
+            var myOptions = {
+                zoom: 16,//utilizaremos o zoom 15
+                center: latlng,//aqui a nossa variavel constando latitude e
+                //longitude ja declarada acima
+                mapTypeId: google.maps.MapTypeId.ROADMAP
+            };
+            //criando o mapa dentro da div com o id="map_canvas" que ja criamos
+            map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
+            //DEFINE AS COORDENADAS do ponto exato - CENTRALIZAÇÃO DO MAPA
+            var marker = new google.maps.Marker({ position: latlng, map: map });
+            map.setCenter(new google.maps.LatLng(-19.989271, -44.010857));
+        }
+        function abreLink() {
+            window.open('http://www.google.com.br');
+        }
+    </script>
+    <script>
+        $(document).ready(function () {
+            chamaMapa();
+        });
+
+    </script>
 }
-<h2>@ViewBag.Title.</h2>
-<h3>@ViewBag.Message</h3>
 
-<address>
-    One Microsoft Way<br />
-    Redmond, WA 98052-6399<br />
-    <abbr title="Phone">P:</abbr>
-    425.555.0100
-</address>
+<div class="row">
+    <div class="col s7">
 
-<address>
-    <strong>Support:</strong>   <a href="mailto:Support@example.com">Support@example.com</a><br />
-    <strong>Marketing:</strong> <a href="mailto:Marketing@example.com">Marketing@example.com</a>
-</address>
+        <div class="row">
+            <div class="input-field col s6">
+                @Html.LabelFor(model => model.Nome, new { @class = "active" })
+                @Html.EditorFor(model => model.Nome, null, new { @class = "validate" })
+            </div>
+            <div class="input-field col s6">
+                @Html.LabelFor(model => model.Telefone, new { @class = "active" })
+                @Html.EditorFor(model => model.Telefone, null, new { @class = "validate" })
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="input-field col s6">
+                @Html.LabelFor(model => model.Email, new { @class = "active" })
+                @Html.EditorFor(model => model.Email, null, new { @class = "validate" })
+            </div>
+            <div class="input-field col s6">
+                @Html.LabelFor(model => model.Assunto, new { @class = "active" })
+                @Html.EditorFor(model => model.Assunto, null, new { @class = "validate" })
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="input-field col s12">
+                @Html.LabelFor(model => model.CorpoEmail, new { @class = "active" })
+                @Html.TextAreaFor(model => model.CorpoEmail, new { @class = "materialize-textarea" })
+            </div>
+        </div>
+        <div class="row">
+            <div class="col s12 right-align">
+                <input type="submit" value="Enviar" class="waves-effect waves-light btn red darken-4" />
+            </div>
+        </div>
+    </div>
+
+    <div class="col s5">
+        <div id="map_canvas" class="canvas-style">
+        </div>
+    </div>
+</div>
+
