@@ -2,3 +2,33 @@
     ViewBag.Title = "Home Page";
 }
 
+@section scripts    {
+    <script>
+        $(document).ready(function () {
+            $('.carousel').carousel();
+        });
+    </script>
+
+}
+<br />
+<br />
+<div>
+    <div class="row">
+
+        <div class="carousel carousel-slider slider-height" data-indicators="true">
+            <a class="carousel-item" href="#one!"><img src="~/Images/background1.jpg"></a>
+            <a class="carousel-item" href="#two!"><img src="~/Images/background2.jpg"></a>
+            <a class="carousel-item" href="#three!"><img src="~/Images/background3.jpg"></a>
+            <a class="carousel-item" href="#four!"><img src="~/Images/background4.jpg"></a>
+        </div>
+
+    </div>
+</div>
+
+<div class="container">
+
+    <div class="section">
+
+    </div>
+
+</div>

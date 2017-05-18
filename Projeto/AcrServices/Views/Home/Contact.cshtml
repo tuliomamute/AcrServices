@@ -1,7 +1,5 @@
 ﻿@model AcrServices.Models.Contact
 
-<h2>Fale Conosco</h2>
-
 @section scripts{
     <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyAvNkhmZzm0ocmtgU9jQZKq42qmi7wmh68"></script>
     <script type="text/javascript" language="javascript">
@@ -36,47 +34,50 @@
 
     </script>
 }
+<div class="container">
+    <h2>Fale Conosco</h2>
 
-<div class="row">
-    <div class="col s7">
+    <div class="row">
+        <div class="col s7">
 
-        <div class="row">
-            <div class="input-field col s6">
-                @Html.LabelFor(model => model.Nome, new { @class = "active" })
-                @Html.EditorFor(model => model.Nome, null, new { @class = "validate" })
+            <div class="row">
+                <div class="input-field col s6">
+                    @Html.LabelFor(model => model.Nome, new { @class = "active" })
+                    @Html.EditorFor(model => model.Nome, null, new { @class = "validate" })
+                </div>
+                <div class="input-field col s6">
+                    @Html.LabelFor(model => model.Telefone, new { @class = "active" })
+                    @Html.EditorFor(model => model.Telefone, null, new { @class = "validate" })
+                </div>
             </div>
-            <div class="input-field col s6">
-                @Html.LabelFor(model => model.Telefone, new { @class = "active" })
-                @Html.EditorFor(model => model.Telefone, null, new { @class = "validate" })
+
+            <div class="row">
+                <div class="input-field col s6">
+                    @Html.LabelFor(model => model.Email, new { @class = "active" })
+                    @Html.EditorFor(model => model.Email, null, new { @class = "validate" })
+                </div>
+                <div class="input-field col s6">
+                    @Html.LabelFor(model => model.Assunto, new { @class = "active" })
+                    @Html.EditorFor(model => model.Assunto, null, new { @class = "validate" })
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="input-field col s12">
+                    @Html.LabelFor(model => model.CorpoEmail, new { @class = "active" })
+                    @Html.TextAreaFor(model => model.CorpoEmail, new { @class = "materialize-textarea" })
+                </div>
+            </div>
+            <div class="row">
+                <div class="col s12 right-align">
+                    <input type="submit" value="Enviar" class="waves-effect waves-light btn red darken-4" />
+                </div>
             </div>
         </div>
 
-        <div class="row">
-            <div class="input-field col s6">
-                @Html.LabelFor(model => model.Email, new { @class = "active" })
-                @Html.EditorFor(model => model.Email, null, new { @class = "validate" })
+        <div class="col s5">
+            <div id="map_canvas" class="canvas-style">
             </div>
-            <div class="input-field col s6">
-                @Html.LabelFor(model => model.Assunto, new { @class = "active" })
-                @Html.EditorFor(model => model.Assunto, null, new { @class = "validate" })
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="input-field col s12">
-                @Html.LabelFor(model => model.CorpoEmail, new { @class = "active" })
-                @Html.TextAreaFor(model => model.CorpoEmail, new { @class = "materialize-textarea" })
-            </div>
-        </div>
-        <div class="row">
-            <div class="col s12 right-align">
-                <input type="submit" value="Enviar" class="waves-effect waves-light btn red darken-4" />
-            </div>
-        </div>
-    </div>
-
-    <div class="col s5">
-        <div id="map_canvas" class="canvas-style">
         </div>
     </div>
 </div>

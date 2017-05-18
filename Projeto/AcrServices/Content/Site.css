@@ -2,3 +2,13 @@
     width: 100%;
     height: 423px;
 }
+
+
+.slider-height {
+    width: 100% !important;
+    height: 400px !important
+}
+
+.carousel-container .container {
+    width: 90%
+}

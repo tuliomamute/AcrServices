@@ -166,6 +166,10 @@
     <Content Include="Fonts\Roboto\Roboto-Thin.woff" />
     <Content Include="Fonts\Roboto\Roboto-Thin.woff2" />
     <None Include="Scripts\jquery-3.1.1.intellisense.js" />
+    <Content Include="Images\background1.jpg" />
+    <Content Include="Images\background2.jpg" />
+    <Content Include="Images\background3.jpg" />
+    <Content Include="Images\background4.jpg" />
     <Content Include="Scripts\jquery-3.1.1.js" />
     <Content Include="Scripts\jquery-3.1.1.min.js" />
     <Content Include="Scripts\jquery-3.1.1.slim.js" />
