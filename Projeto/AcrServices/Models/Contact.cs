@@ -11,7 +11,7 @@ namespace AcrServices.Models
         [DisplayName("Nome")]
         public string Nome { get; set; }
 
-        [DisplayName("Telefone Para Contato")]
+        [DisplayName("Telefone")]
         public string Telefone { get; set; }
 
         [DisplayName("Email")]
