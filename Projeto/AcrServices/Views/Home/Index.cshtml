@@ -5,21 +5,20 @@
 @section scripts    {
     <script>
         $(document).ready(function () {
-            $('.carousel').carousel();
+            $('.carousel.carousel-slider').carousel({ fullWidth: true, indicators: true, duratio: 400, dist: 10 });
         });
     </script>
 
 }
-<br />
-<br />
-<div>
+
+<div class="carousel-container">
     <div class="row">
 
         <div class="carousel carousel-slider slider-height" data-indicators="true">
-            <a class="carousel-item" href="#one!"><img src="~/Images/background1.jpg"></a>
-            <a class="carousel-item" href="#two!"><img src="~/Images/background2.jpg"></a>
-            <a class="carousel-item" href="#three!"><img src="~/Images/background3.jpg"></a>
-            <a class="carousel-item" href="#four!"><img src="~/Images/background4.jpg"></a>
+            <a class="carousel-item" href="#one!"><img class="carousel-image" src="~/Images/background1.jpg"></a>
+            <a class="carousel-item" href="#two!"><img class="carousel-image" src="~/Images/background2.jpg"></a>
+            <a class="carousel-item" href="#three!"><img class="carousel-image" src="~/Images/background3.jpg"></a>
+            <a class="carousel-item" href="#four!"><img class="carousel-image" src="~/Images/background4.jpg"></a>
         </div>
 
     </div>
@@ -28,7 +27,30 @@
 <div class="container">
 
     <div class="section">
-
+        <!--   Icon Section   -->
+        <div class="row">
+            <div class="col s12 m4">
+                <div class="icon-block">
+                    <h2 class="center light-blue-text"><i class="material-icons">flash_on</i></h2>
+                    <h5 class="center">Diferencial 1</h5>
+                    <p class="light">We did most of the heavy lifting for you to provide a default stylings that incorporate our custom components. Additionally, we refined animations and transitions to provide a smoother experience for developers.</p>
+                </div>
+            </div>
+            <div class="col s12 m4">
+                <div class="icon-block">
+                    <h2 class="center light-blue-text"><i class="material-icons">group</i></h2>
+                    <h5 class="center">Diferencial 2</h5>
+                    <p class="light">By utilizing elements and principles of Material Design, we were able to create a framework that incorporates components and animations that provide more feedback to users. Additionally, a single underlying responsive system across all platforms allow for a more unified user experience.</p>
+                </div>
+            </div>
+            <div class="col s12 m4">
+                <div class="icon-block">
+                    <h2 class="center light-blue-text"><i class="material-icons">settings</i></h2>
+                    <h5 class="center">Diferencial 3</h5>
+                    <p class="light">We have provided detailed documentation as well as specific code examples to help new users get started. We are also always open to feedback and can answer any questions a user may have about Materialize.</p>
+                </div>
+            </div>
+        </div>
     </div>
 
 </div>

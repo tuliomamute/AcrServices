@@ -6,9 +6,14 @@
 
 .slider-height {
     width: 100% !important;
-    height: 400px !important
+    height: 400px !important;
+    position: inherit
 }
 
 .carousel-container .container {
     width: 90%
+}
+
+.carousel-image {
+    height: inherit !important
 }
